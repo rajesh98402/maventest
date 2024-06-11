@@ -1,9 +1,6 @@
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
-    }
-    stages {
+       stages {
         stage('Build') {
             steps {
                 bat 'mvn -B -DskipTests clean package'
